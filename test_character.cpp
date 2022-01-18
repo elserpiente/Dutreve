@@ -41,8 +41,11 @@ int main() {
   //We are going to create a Character and check it's
   //attributes and methods
 
-  Character c;
-  test_Character(c);
+
+  //!!!!!!Warning!!!!!!
+  //Now it is abstract we can no longer create a character
+  //Character c;
+  //test_Character(c);
 
 
   return 0;

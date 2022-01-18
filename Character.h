@@ -12,4 +12,5 @@ public:
   inline float speed() const{
     return _speed;
   }
+  virtual std::string WhatAmI() const = 0;
 };
