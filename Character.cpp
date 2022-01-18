@@ -6,9 +6,13 @@ Character::Character(){
 }
 
 void Character::Accelerate(){
-  this->_speed++;
+  if(this->_speed<this->_max_speed){
+    this->_speed++;
+  }
 }
 
 void Character::Break(){
-  this->_speed--;
+  if(this->_speed>0){
+    this->_speed--;
+  }
 }
