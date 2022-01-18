@@ -1,5 +1,5 @@
-#ifndef DEF_PERSONNAGE
-#define DEF_PERSONNAGE
+#ifndef DEF_CHARACTER
+#define DEF_CHARACTER
 
 #include <iostream>
 #include <string>
