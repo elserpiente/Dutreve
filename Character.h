@@ -1,3 +1,6 @@
+#ifndef DEF_PERSONNAGE
+#define DEF_PERSONNAGE
+
 #include <iostream>
 #include <string>
 
@@ -15,3 +18,5 @@ public:
   }
   virtual std::string WhatAmI() const = 0;
 };
+
+#endif

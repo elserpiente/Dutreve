@@ -1,4 +1,5 @@
 #include "Mario.h"
+#include "Yoshi.h"
 
 void test_speed(Character& c){
   std::cout<<"#################### Test of speed method ####################\n";
@@ -31,7 +32,7 @@ void test_break(Character& c){
   std::cout<<"Speed : "<<c.speed()<<'\n';
 }
 
-void test_Mario(Character& c){
+void test_Mario_Yoshi(Character& c){
   test_speed(c);
   test_acceleration(c);
   test_break(c);
@@ -44,7 +45,9 @@ int main() {
 
 
   Mario m;
-  test_Mario(m);
+  Yoshi y;
+  test_Mario_Yoshi(m);
+  test_Mario_Yoshi(y);
 
 
   return 0;
