@@ -93,12 +93,12 @@ void race(std::vector <Character*>& runners){
     }
 
     if (meters[0]==meters[1]){
-      std::cout<<runners[0]->WhatAmI()<<" and "<<runners[1]->WhatAmI()<<" are ex aequo";
+      std::cout<<runners[0]->WhatAmI()<<" and "<<runners[1]->WhatAmI()<<" are ex aequo\n";
     } else{
       if (meters[0]<meters[1]){
-        std::cout<<runners[0]->WhatAmI()<<" is the winner ! "<<runners[1]->WhatAmI()<<" loses.";
+        std::cout<<runners[0]->WhatAmI()<<" is the winner ! "<<runners[1]->WhatAmI()<<" loses.\n";
       } else{
-        std::cout<<runners[1]->WhatAmI()<<" is the winner ! "<<runners[0]->WhatAmI()<<" loses.";
+        std::cout<<runners[1]->WhatAmI()<<" is the winner ! "<<runners[0]->WhatAmI()<<" loses.\n";
         }
       }
     } else{
@@ -113,14 +113,17 @@ int main() {
 
 
   Mario m;
-  Yoshi y;
+  Yoshi y(3);
   test_Mario_Yoshi(m);
   test_Mario_Yoshi(y);
 
   std::vector <Character*> runners;
   runners.push_back(new Mario());
-  runners.push_back(new Yoshi());
+  runners.push_back(new Yoshi(4));
 
+  race(runners);
+
+  runners[0]=new Yoshi(3);
   race(runners);
 
 

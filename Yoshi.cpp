@@ -1,7 +1,15 @@
 #include "Yoshi.h"
 
+Yoshi::Yoshi(int nbCrests){
+  this->_nbCrests=nbCrests;
+}
+
 std::string Yoshi::WhatAmI() const{
-  std::string name="Yoshi";
+  char crests[10];
+  sprintf(crests,"%d",this->_nbCrests);
+  std::string crests_s(crests);
+  std::string endSentence(" crested Yoshi");
+  std::string name=crests+endSentence;
   return name;
 }
 
