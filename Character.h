@@ -11,7 +11,7 @@ protected:
 public:
   Character();
   ~Character()=default;
-  void Accelerate();
+  virtual void Accelerate();
   void Break();
   inline float speed() const{
     return _speed;

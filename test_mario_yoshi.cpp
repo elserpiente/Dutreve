@@ -6,24 +6,15 @@ void test_speed(Character& c){
   std::cout<<"Speed : "<<c.speed()<<'\n';
 }
 
-void test_acceleration_Mario(Mario& c){
+void test_acceleration(Character& c){
   std::cout<<"#################### Test of Acceleration method ####################\n";
   int j=0;
   for(int i=0;i<=10;i++){
-    std::cout<<j<<" acceleration -> speed should be of "<<i<<'\n';
-    std::cout<<"Speed : "<<c.speed()<<'\n';
-    c.Accelerate();
-    j++;
-  }
-  std::cout<<j<<" acceleration -> speed should be of 10"<<'\n';
-  std::cout<<"Speed : "<<c.speed()<<'\n';
-}
-
-void test_acceleration_Yoshi(Yoshi& c){
-  std::cout<<"#################### Test of Acceleration method ####################\n";
-  int j=0;
-  for(int i=0;i<=10;i=i+2){
-    std::cout<<j<<" acceleration -> speed should be of "<<i<<'\n';
+    if(i*2<10){
+      std::cout<<j<<" acceleration -> speed should be of "<<i<<" if I am Mario "<<i*2<<" if I am Yoshi"<<'\n';
+    }else{
+      std::cout<<j<<" acceleration -> speed should be of "<<i<<" if I am Mario "<<10<<" if I am Yoshi"<<'\n';
+    }
     std::cout<<"Speed : "<<c.speed()<<'\n';
     c.Accelerate();
     j++;
@@ -45,16 +36,9 @@ void test_break(Character& c){
   std::cout<<"Speed : "<<c.speed()<<'\n';
 }
 
-void test_Mario(Mario& c){
+void test_Mario_Yoshi(Character& c){
   test_speed(c);
-  test_acceleration_Mario(c);
-  test_break(c);
-  std::cout<<"I am "<<c.WhatAmI()<<'\n';
-}
-
-void test_Yoshi(Yoshi& c){
-  test_speed(c);
-  test_acceleration_Yoshi(c);
+  test_acceleration(c);
   test_break(c);
   std::cout<<"I am "<<c.WhatAmI()<<'\n';
 }
@@ -66,8 +50,8 @@ int main() {
 
   Mario m;
   Yoshi y;
-  test_Mario(m);
-  test_Yoshi(y);
+  test_Mario_Yoshi(m);
+  test_Mario_Yoshi(y);
 
 
   return 0;
