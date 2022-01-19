@@ -1,5 +1,4 @@
 #include "Character.h"
-#include <stdlib.h>
 
 class Yoshi : public Character{
 protected:

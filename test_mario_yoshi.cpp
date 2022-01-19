@@ -123,12 +123,18 @@ int main() {
 
   race(runners);
 
+  for(std::vector<Character*>::iterator it = runners.begin(); it != runners.end(); it++){
+    delete(*(it));
+  }
+
   runners[0]=new Yoshi(3);
+  runners[1]=new Yoshi(4);
+  //runners.push_back(new Yoshi(5));
   race(runners);
 
-
-
-
+  for(int i=0;i<runners.size();i++){
+    delete(runners[i]);
+  }
 
 
   return 0;
