@@ -151,7 +151,7 @@ int main() {
   //We check if the runners accelerate at a good speed according of their type
   race(runners);
 
-  //We delete our two characters to avoid any memory leak using an iteratored for loop
+  //We delete our two characters to avoid any memory leak using an iterator for loop
   for(std::vector<Character*>::iterator it = runners.begin(); it != runners.end(); it++){
     delete(*(it));
   }
@@ -162,7 +162,7 @@ int main() {
   //We check if the runners accelerate at a good speed according of their type
   race(runners);
 
-//We delete our two characters to avoid any memory leak using an indexed for loop
+//We delete our two characters to avoid any memory leak using a range based for loop
   for(int i=0;i<runners.size();i++){
     delete(runners[i]);
   }
