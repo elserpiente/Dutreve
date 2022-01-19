@@ -43,7 +43,9 @@ int main() {
 
 
   //!!!!!!Warning!!!!!!
-  //Now it is abstract we can no longer create a character
+  //Now it is abstract we can no longer create a character like that
+  //This file has no longer use, it was only made to test our Character class
+  //before it was abstract.
   //Character c;
   //test_Character(c);
 
